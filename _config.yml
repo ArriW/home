@@ -40,8 +40,8 @@ navigation_header:
   url: /about/
 - title: Blog
   url: /blog/
--title: sc2
-  url: /skillcraft_regression.html
+- title: sc2
+  url: /skillcraft_regression/
 
 # Footer nav
 navigation_footer:
