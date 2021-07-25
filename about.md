@@ -1,5 +1,5 @@
 ---
-title: About this website
+title: About me
 ---
 
-I'm not sure yet what this website is about, but I'm sure I'll work it out soon.
+Ive spent most of my years in Maryland, before moving to Nevada. I am a gamer, baker, statistician, and a explorer.
