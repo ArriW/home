@@ -23,7 +23,7 @@ plugins:
 # Site settings
 url: 'https://mydomain.com'
 baseurl: ''
-title: 'My website'
+title: 'skillcraft.codes'
 description: 'This is my new website'
 permalink: pretty
 logo: "https://s.gravatar.com/avatar/4267474913a47aca4b5ef31cf160f72a?s=50"
@@ -34,18 +34,22 @@ paginate_path: blog/page:num
 
 # Header nav
 navigation_header:
-- title: Home
+- title: home
   url: /
-- title: About
+- title: about
   url: /about/
-- title: Blog
+- title: blog
   url: /blog/
+- title: contact
+  url: /contact/
+- title: "| Papers:"
 - title: sc2
   url: /skillcraft_regression/
 
+
 # Footer nav
 navigation_footer:
-- title: Back to top
+- title: Btop
   url: "#top"
 
 # Collections
@@ -53,7 +57,7 @@ collections:
   posts:
     title: Posts
     output: true
-    description: "My thoughts and ideas"
+    description: ""
 
 
 # Collection settings
