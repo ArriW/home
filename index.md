@@ -1,6 +1,6 @@
 ---
 title: Welcome
-feature_image: <img style="width:100%; border:1px solid black" src="/assets/P5300231.png" alt="Picture of motorcycle trip in Southwest United States"/>
+feature_image: <img style="width:100%; border:1px solid black" src="/assets/Lucianß.png" alt="Picture of motorcycle trip in Southwest United States"/>
 feature_text: |
   ## Arrington Walters
 ---
@@ -9,7 +9,5 @@ I am Process Engineer at Tesla's Gigafactory 1 (Sparks, Nevada). My work is focu
 
 # About me
 
-<img style="width:100%; border:1px solid black" src="/assets/P5300231.png" alt="Picture of motorcycle trip in Southwest United States"/>
 
-<a href="https://github.com/ArriW target="blank">Zhuang Zhou</a>.
   
