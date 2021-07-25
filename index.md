@@ -1,8 +1,8 @@
 ---
-title: Welcome to my website
+title: My professional website
 feature_image: "https://picsum.photos/1300/400?image=989"
 feature_text: |
-  ## Hello world
+  ## Arrington Walters
 ---
-
-There isn't much going on here yet, but watch this space
+Process Engineer - Tesla
+https://github.com/ArriW
