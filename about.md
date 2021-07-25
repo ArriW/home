@@ -3,7 +3,7 @@ title: About this website
 ---
 
 <div style="float:left; margin-right:20px;">
-	        <img style="max-height:450px; border:1px solid black" src="/assets/redwoods.png" alt="Picture of Arrington Walters">
+	        <img style="max-height:450px; border:1px solid black" src="/assets/redwoods_0.png" alt="Picture of Arrington Walters">
 </div>
 
 <h1 class="page-title">
