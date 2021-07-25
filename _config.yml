@@ -34,14 +34,14 @@ paginate_path: blog/page:num
 
 # Header nav
 navigation_header:
-- title: home
+- title: Home
   url: /
-- title: about
+- title: About
   url: /about/
-- title: blog
+- title: Blog
   url: /blog/
 -title: sc2
-  url: /sc2/
+  url: /skillcraft_regression.html
 
 # Footer nav
 navigation_footer:
