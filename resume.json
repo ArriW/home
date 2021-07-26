@@ -32,7 +32,7 @@
           "Root cause failure modes within the manufacturing process and determine correction actions."],
         "position": "Process Engineer",
         "startDate": "2021-03-31",
-        "website": "https://www.tesla.com/"
+        "url": "https://www.tesla.com/"
       },
       {
         "name": "Howmet Aerospace",
@@ -43,7 +43,7 @@
           "Managed site’s Power BI applications to broadcast department-specific key production indicators on overhead displays"],
         "position": "Lead Continuous Improvement Engineer",
         "startDate": "2019-01-31",
-        "website": "https://www.howmet.com/"
+        "url": "https://www.howmet.com/"
       },
       {
         "name": "Howmet Aerospace",
@@ -55,7 +55,7 @@
           "Developed a Root Cause and Corrective Action process and formed a technical steering committee to monitor non-conformities and rework inventory"],
         "position": "Continuous Improvement Engineer",
         "startDate": "2017-07-31",
-        "website": "https://www.howmet.com/"
+        "url": "https://www.howmet.com/"
       },
       {
         "name": "Randa Accessories",
@@ -68,7 +68,7 @@
           "Planned and allocated projects for Industrial Engineer intern"],
         "position": "Industrial Engineer",
         "startDate": "2016-09-30",
-        "website": "https://www.randa.net/"
+        "url": "https://www.randa.net/"
       },
       {
         "name": "WorldPak Flexible Packaging, LLC.",
@@ -77,7 +77,7 @@
         "highlights": [],
         "position": "Process Engineer Intern",
         "startDate": "2016-01-31",
-        "website": "http://worldpakllc.com/"
+        "url": "http://worldpakllc.com/"
       },
       {
         "name": "Home Innovation Research Labs",
@@ -86,7 +86,7 @@
         "highlights": [],
         "position": "Intern",
         "startDate": "2014-03-31",
-        "website": "https://www.homeinnovation.com/"
+        "url": "https://www.homeinnovation.com/"
       },
       {
         "name": "Continental Pools, Inc.",
@@ -95,7 +95,7 @@
         "highlights": [],
         "position": "Lifeguard Manager",
         "startDate": "2012-05-31",
-        "website": "https://www.continentalpools.com/"
+        "url": "https://www.continentalpools.com/"
       }
     ],
     "volunteer": [],

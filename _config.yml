@@ -44,11 +44,8 @@ navigation_header:
   url: https://registry.jsonresume.org/arriw/
 - title: contact
   url: /contact/
-- title: "| papers:"
-  url: /papers/
-- title: sc2
-  url: /papers/skillcraft_regression/
-
+- title: "posts"
+  url: /posts/
 
 # Footer nav
 navigation_footer:
