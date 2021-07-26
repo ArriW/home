@@ -40,6 +40,8 @@ navigation_header:
   url: /about/
 #- title: blog
 #  url: /blog/
+- title: resume
+  url: https://registry.jsonresume.org/arriw/
 - title: contact
   url: /contact/
 - title: "| papers:"

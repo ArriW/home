@@ -1,0 +1,180 @@
+{
+    "meta": {
+      "theme": "elegant"
+    },
+    "basics": {
+      "name": "Arrington Walters",
+      "label": "Process Engineer at Tesla",
+      "picture": "https://s.gravatar.com/avatar/4267474913a47aca4b5ef31cf160f72a",
+      "email": "arrington.walters@gmail.com",
+      "phone": "",
+      "website": "http://skillcraft.codes",
+      "summary": "Mechanical Engineer with a focus on OEE centric data science.",
+      "location": {
+        "countryCode": "US",
+        "address": "United States"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "",
+          "url": "https://tinyurl.com/sncc48kc"
+        }
+      ]
+    },
+    "work": [
+      {
+        "name": "Tesla",
+        "location":"Sparks, NV",
+        "highlights": ["Create and implement production processes for residential energy production lines.",
+          "Build key performance indicators (KPIs) to assess production line processes and to improve operations.",
+          "Collaborate with NPI, Firmware Team, Design, Equipment, and Manufacturing teams to manage products through the lifecycle.",
+          "Root cause failure modes within the manufacturing process and determine correction actions."],
+        "position": "Process Engineer",
+        "startDate": "2021-03-31",
+        "website": "https://www.tesla.com/"
+      },
+      {
+        "name": "Howmet Aerospace",
+        "location":"Verdi, NV",
+        "endDate": "2020-12-31",
+        "highlights": ["Utilized Python programming language to automate quality and supply-chain reports","Performed multivariate regression to adjust furnace standard operating procedures, capturing the study in a cross-industry standard process for data mining (CRISP-DM)",
+          "Managed 1.2 million dollar capital budget and subsidiary capital projects","Predictively modeled quality non-conformances and safety risks to prompt daily pre-task briefs",
+          "Managed site’s Power BI applications to broadcast department-specific key production indicators on overhead displays"],
+        "position": "Lead Continuous Improvement Engineer",
+        "startDate": "2019-01-31",
+        "website": "https://www.howmet.com/"
+      },
+      {
+        "name": "Howmet Aerospace",
+        "location":"Verdi, NV",
+        "endDate": "2019-01-31",
+        "highlights": ["Decreased CNC machine’s cycle times for high running parts, resulting in an increase of throughput dollars by 1 mil/month and the removal of  reliance on outside service providers",
+          "Lead site’s Human Performance program to teach employees that error-likely situations are predictable, manageable, and preventable",
+          "Administered site’s maintenance work order system","Implemented lean operational disciplines like 5S to decrease excessive handling and pedestrian and mobile equipment interference",
+          "Developed a Root Cause and Corrective Action process and formed a technical steering committee to monitor non-conformities and rework inventory"],
+        "position": "Continuous Improvement Engineer",
+        "startDate": "2017-07-31",
+        "website": "https://www.howmet.com/"
+      },
+      {
+        "name": "Randa Accessories",
+        "location":"Sparks, NV",
+        "endDate": "2017-04-30",
+        "highlights": ["Managed the standard allowed minutes for an incentive program",
+          "Invented and implemented Visual Basic Applications used to appraise the value of incentive jobs",
+          "Coordinated a weekly debrief meeting with Senior Production Managers",
+          "Designed an open floor plan RFID module used to track pallet locations",
+          "Planned and allocated projects for Industrial Engineer intern"],
+        "position": "Industrial Engineer",
+        "startDate": "2016-09-30",
+        "website": "https://www.randa.net/"
+      },
+      {
+        "name": "WorldPak Flexible Packaging, LLC.",
+        "location":"Reno, NV",
+        "endDate": "2016-08-31",
+        "highlights": [],
+        "position": "Process Engineer Intern",
+        "startDate": "2016-01-31",
+        "website": "http://worldpakllc.com/"
+      },
+      {
+        "name": "Home Innovation Research Labs",
+        "location":"Upper Malboro, MD",
+        "endDate": "2014-10-31",
+        "highlights": [],
+        "position": "Intern",
+        "startDate": "2014-03-31",
+        "website": "https://www.homeinnovation.com/"
+      },
+      {
+        "name": "Continental Pools, Inc.",
+        "location":"Frederick, MD",
+        "endDate": "2013-09-30",
+        "highlights": [],
+        "position": "Lifeguard Manager",
+        "startDate": "2012-05-31",
+        "website": "https://www.continentalpools.com/"
+      }
+    ],
+    "volunteer": [],
+    "education": [
+      {
+        "institution": "University of Nevada, Reno",
+        "area": "Data Science",
+        "studyType": "Master of Science - MS Information Systems: Data Analytics",
+        "startDate": "2019-12-31",
+        "gpa": "4.0",
+        "courses": [
+          "IS682 - Applied Data Science",
+          "STAT757 - Applied Regression",
+          "IS670 - Information Security and Control"
+        ]
+      },
+      {
+        "institution": "University of Maryland - A. James Clark School of Engineering",
+        "area": "Mechanical Engineering",
+        "studyType": "Bachelor of Science - BS",
+        "startDate": "2011-12-31",
+        "endDate": "2015-12-31",
+        "gpa": "3.5",
+        "courses": [
+          "ENME462 - Controls",
+          "ENME466 - Lean Six Sigma",
+          "ENME371 - Engineering Design",
+          "ENME488 - Independent Research",
+          "ENME331 - Fluid Mechanics",
+          "ENME470 - Finite Element Analysis",
+          "ENME472 - Capstone Design"
+        ]
+      }
+    ],
+    "awards": [
+      {
+        "title": "Six Sigma Green Belt (CSSGB)",
+        "date": "2019-05-31",
+        "awarder": "ASQ - World Headquarters",
+        "summary": ""
+      },
+      {
+        "title": "Lean Six Sigma Innovation & Design: Green Belt Certificate",
+        "date": "2014-12-31",
+        "awarder": "David Bigio",
+        "summary": ""
+      }
+    ],
+    "publications": [],
+    "skills": [
+      {
+        "name": "Continous Improvement",
+        "level": "Expert",
+        "keywords": ["Lean","Six Sigma","DMAIC","OEE","MES/MOS systems",
+          "Manufacturing Instructions","Change Contronl"]
+      },
+      {
+        "name": "Manufacturing",
+        "level": "Proficient",
+        "keywords": ["Ignition","Firmware","Controller Area Network(CAN)","CAD","Forging"]
+      },
+      {
+        "name": "Analyst",
+        "level": "Proficient",
+        "keywords": ["Python","R","PowerBI","VBA","MySQL","github","Markdown","latex","API","Atlassian tools"]
+      }
+    ],
+    "languages": [],
+    "interests": [    {
+      "name": "Videogames"
+    },
+    {
+      "name": "Music / DJing"
+    },
+    {
+      "name": "Sustainability"
+    },
+    {
+      "name": "Yoga"
+    }],
+    "references": []
+  }
