@@ -23,8 +23,8 @@ plugins:
 # Site settings
 url: 'https://mydomain.com'
 baseurl: ''
-title: 'skillcraft.codes'
-description: 'This is my new website'
+title: 'Skillcraft.Codes'
+description: 'arri codes'
 permalink: pretty
 logo: "https://s.gravatar.com/avatar/4267474913a47aca4b5ef31cf160f72a?s=50"
 
@@ -38,18 +38,19 @@ navigation_header:
   url: /
 - title: about
   url: /about/
-- title: blog
-  url: /blog/
+#- title: blog
+#  url: /blog/
 - title: contact
   url: /contact/
-- title: "| Papers:"
+- title: "| papers:"
+  url: /papers/
 - title: sc2
-  url: /skillcraft_regression/
+  url: /papers/skillcraft_regression/
 
 
 # Footer nav
 navigation_footer:
-- title: Btop
+- title: top
   url: "#top"
 
 # Collections
