@@ -1,9 +1,23 @@
-# Starter kit for [Alembic](https://alembic.darn.es/)
+# skillcraft.codes
 
-This is a very simple starting point if you wish to use Alembic [as a Jekyll theme gem](https://alembic.darn.es/#as-a-jekyll-theme) or as a [GitHub Pages remote theme](https://github.com/daviddarnes/alembic-kit/tree/remote-theme) (see `remote-theme` branch).
+Personal site for Arrington Walters. React 19 + TypeScript + Vite, styled with Tailwind. Repo data is fetched live from the GitHub REST API.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daviddarnes/alembic-kit)
+## Develop
 
-or
+```bash
+npm install
+npm run dev
+```
 
-**[Download the GitHub Pages kit](https://github.com/daviddarnes/alembic-kit/archive/remote-theme.zip)**
+## Build
+
+```bash
+npm run typecheck
+npm run build
+```
+
+Output goes to `dist/`. Netlify is configured via `netlify.toml`.
+
+## Editing content
+
+All static profile content lives in `src/data/profile.ts`. Photos and other static assets live in `public/assets/`.

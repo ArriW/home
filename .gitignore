@@ -1,2 +1,7 @@
-.jekyll-cache/
-_site/
+node_modules/
+dist/
+.DS_Store
+*.local
+.env*
+!.env.example
+*.tsbuildinfo
