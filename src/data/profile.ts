@@ -21,6 +21,7 @@ export interface ProfileData {
   readonly resumeUrl: string;
   readonly emails: readonly EmailEntry[];
   readonly social: readonly SocialLink[];
+  readonly featuredRepoNames: readonly string[];
 }
 
 export const profile: ProfileData = {
@@ -47,4 +48,5 @@ export const profile: ProfileData = {
     },
     { name: "Twitch", url: "https://www.twitch.tv/conjura", handle: "conjura" },
   ],
+  featuredRepoNames: [],
 };

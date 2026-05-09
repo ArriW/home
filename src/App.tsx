@@ -12,7 +12,10 @@ export function App() {
       <main>
         <Hero profile={profile} />
         <About profile={profile} />
-        <Repos username={profile.githubUsername} />
+        <Repos
+          username={profile.githubUsername}
+          featuredNames={profile.featuredRepoNames}
+        />
         <Contact profile={profile} />
       </main>
       <footer className="border-t border-zinc-900 py-8 text-center text-sm text-zinc-500">
