@@ -1,23 +1,28 @@
+import { z } from "zod";
 import type { GitHubRepo } from "../types";
 
 const GITHUB_API = "https://api.github.com";
 
-interface RawGitHubRepo {
-  readonly id: number;
-  readonly name: string;
-  readonly full_name: string;
-  readonly description: string | null;
-  readonly html_url: string;
-  readonly homepage: string | null;
-  readonly language: string | null;
-  readonly stargazers_count: number;
-  readonly forks_count: number;
-  readonly updated_at: string;
-  readonly pushed_at: string;
-  readonly fork: boolean;
-  readonly archived: boolean;
-  readonly topics?: readonly string[];
-}
+const RawGitHubRepoSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  full_name: z.string(),
+  description: z.string().nullable(),
+  html_url: z.string(),
+  homepage: z.string().nullable(),
+  language: z.string().nullable(),
+  stargazers_count: z.number(),
+  forks_count: z.number(),
+  updated_at: z.string(),
+  pushed_at: z.string(),
+  fork: z.boolean(),
+  archived: z.boolean(),
+  topics: z.array(z.string()).optional(),
+});
+
+type RawGitHubRepo = z.infer<typeof RawGitHubRepoSchema>;
+
+const RawGitHubReposResponseSchema = z.array(RawGitHubRepoSchema);
 
 export async function fetchUserRepos(
   username: string,
@@ -29,7 +34,7 @@ export async function fetchUserRepos(
       Accept: "application/vnd.github+json",
       "X-GitHub-Api-Version": "2022-11-28",
     },
-    signal,
+    signal: signal ?? null,
   });
 
   if (!response.ok) {
@@ -39,18 +44,15 @@ export async function fetchUserRepos(
   }
 
   const raw: unknown = await response.json();
-  if (!Array.isArray(raw)) {
-    throw new Error("Unexpected GitHub API response: expected an array");
+  const parsed = RawGitHubReposResponseSchema.safeParse(raw);
+  if (!parsed.success) {
+    throw new Error(`Invalid GitHub API response: ${parsed.error.message}`);
   }
 
-  return raw.map(toRepo);
+  return parsed.data.map(toRepo);
 }
 
-function toRepo(raw: unknown): GitHubRepo {
-  if (typeof raw !== "object" || raw === null) {
-    throw new Error("Invalid repo entry: not an object");
-  }
-  const r = raw as RawGitHubRepo;
+function toRepo(r: RawGitHubRepo): GitHubRepo {
   return {
     id: r.id,
     name: r.name,

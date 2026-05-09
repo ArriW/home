@@ -17,6 +17,9 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
     "types": ["node"]
   },
   "include": ["src", "vite.config.ts"]
