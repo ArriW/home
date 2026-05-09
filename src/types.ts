@@ -8,8 +8,8 @@ export interface GitHubRepo {
   readonly language: string | null;
   readonly stargazersCount: number;
   readonly forksCount: number;
-  readonly updatedAt: string;
-  readonly pushedAt: string;
+  readonly updatedAt: string | null;
+  readonly pushedAt: string | null;
   readonly fork: boolean;
   readonly archived: boolean;
   readonly topics: readonly string[];

@@ -6,10 +6,13 @@ interface RepoCardProps {
 }
 
 export function RepoCard({ repo }: RepoCardProps) {
-  const lastUpdated = new Date(repo.pushedAt).toLocaleDateString(undefined, {
-    year: "numeric",
-    month: "short",
-  });
+  const lastUpdated =
+    repo.pushedAt !== null
+      ? new Date(repo.pushedAt).toLocaleDateString(undefined, {
+          year: "numeric",
+          month: "short",
+        })
+      : null;
 
   return (
     <a
@@ -44,7 +47,7 @@ export function RepoCard({ repo }: RepoCardProps) {
             {repo.language}
           </span>
         )}
-        <span className="font-mono">updated {lastUpdated}</span>
+        <span className="font-mono">updated {lastUpdated ?? "—"}</span>
       </div>
     </a>
   );

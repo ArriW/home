@@ -18,7 +18,7 @@ function rankRepos(repos: readonly GitHubRepo[]): readonly GitHubRepo[] {
       if (b.stargazersCount !== a.stargazersCount) {
         return b.stargazersCount - a.stargazersCount;
       }
-      return b.pushedAt.localeCompare(a.pushedAt);
+      return (b.pushedAt ?? "").localeCompare(a.pushedAt ?? "");
     });
 }
 

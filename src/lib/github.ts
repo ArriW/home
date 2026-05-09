@@ -1,28 +1,11 @@
-import { z } from "zod";
+import type { Endpoints } from "@octokit/types";
 import type { GitHubRepo } from "../types";
 
+type ListUserReposResponse =
+  Endpoints["GET /users/{username}/repos"]["response"]["data"];
+type RawGitHubRepo = ListUserReposResponse[number];
+
 const GITHUB_API = "https://api.github.com";
-
-const RawGitHubRepoSchema = z.object({
-  id: z.number(),
-  name: z.string(),
-  full_name: z.string(),
-  description: z.string().nullable(),
-  html_url: z.string(),
-  homepage: z.string().nullable(),
-  language: z.string().nullable(),
-  stargazers_count: z.number(),
-  forks_count: z.number(),
-  updated_at: z.string(),
-  pushed_at: z.string(),
-  fork: z.boolean(),
-  archived: z.boolean(),
-  topics: z.array(z.string()).optional(),
-});
-
-type RawGitHubRepo = z.infer<typeof RawGitHubRepoSchema>;
-
-const RawGitHubReposResponseSchema = z.array(RawGitHubRepoSchema);
 
 export async function fetchUserRepos(
   username: string,
@@ -43,13 +26,8 @@ export async function fetchUserRepos(
     );
   }
 
-  const raw: unknown = await response.json();
-  const parsed = RawGitHubReposResponseSchema.safeParse(raw);
-  if (!parsed.success) {
-    throw new Error(`Invalid GitHub API response: ${parsed.error.message}`);
-  }
-
-  return parsed.data.map(toRepo);
+  const data = (await response.json()) as ListUserReposResponse;
+  return data.map(toRepo);
 }
 
 function toRepo(r: RawGitHubRepo): GitHubRepo {
@@ -57,16 +35,16 @@ function toRepo(r: RawGitHubRepo): GitHubRepo {
     id: r.id,
     name: r.name,
     fullName: r.full_name,
-    description: r.description,
+    description: r.description ?? null,
     htmlUrl: r.html_url,
-    homepage: r.homepage,
-    language: r.language,
-    stargazersCount: r.stargazers_count,
-    forksCount: r.forks_count,
-    updatedAt: r.updated_at,
-    pushedAt: r.pushed_at,
+    homepage: r.homepage ?? null,
+    language: r.language ?? null,
+    stargazersCount: r.stargazers_count ?? 0,
+    forksCount: r.forks_count ?? 0,
+    updatedAt: r.updated_at ?? null,
+    pushedAt: r.pushed_at ?? null,
     fork: r.fork,
-    archived: r.archived,
+    archived: r.archived ?? false,
     topics: r.topics ?? [],
   };
 }
