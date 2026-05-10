@@ -39,11 +39,46 @@ jobs:
             type=sha,format=short
             type=raw,value=latest,enable={{is_default_branch}}
 
+      - uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+
       - uses: docker/build-push-action@v6
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to:   type=gha,mode=max
+
+      # Tailscale-only deploy trigger. Runner joins the tailnet ephemerally
+      # via tag:ci, hits Watchtower's HTTP API, then exits. ACL gates this so
+      # tag:ci can ONLY reach watchtower:443 — no other beep service.
+      - name: Tailscale (ephemeral runner identity)
+        if: github.ref_name == github.event.repository.default_branch
+        uses: tailscale/github-action@v2
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret:    ${{ secrets.TS_OAUTH_SECRET }}
+          tags:            tag:ci
+
+      - name: Trigger Watchtower deploy
+        if: github.ref_name == github.event.repository.default_branch
+        env:
+          WATCHTOWER_TOKEN: ${{ secrets.WATCHTOWER_HTTP_API_TOKEN }}
+          IMAGE: ghcr.io/${{ github.repository }}
+        run: |
+          if [ -z "$WATCHTOWER_TOKEN" ]; then
+            echo "::warning::WATCHTOWER_HTTP_API_TOKEN not set; skipping deploy trigger (5-min poll picks it up)."
+            exit 0
+          fi
+          # GHCR namespaces are lowercase; ${{ github.repository }} preserves
+          # the original case (ArriW/...). Watchtower's `image=` filter is
+          # case-sensitive, so lowercase before sending or it won't match.
+          IMAGE_LC=$(echo "$IMAGE" | tr '[:upper:]' '[:lower:]')
+          curl -fsS \
+            -H "Authorization: Bearer $WATCHTOWER_TOKEN" \
+            -X POST \
+            "https://watchtower.tail699d2d.ts.net/v1/update?image=$IMAGE_LC"
