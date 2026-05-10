@@ -8,9 +8,12 @@ RUN npm ci --no-audit --no-fund
 COPY . .
 RUN npm run build
 
-FROM nginx:alpine AS runtime
+# nginx-unprivileged runs as user `nginx` (uid 101) with no setuid; default
+# listen port is 8080. This drops the privileged-port requirement, lets us
+# run rootless, and matches the platform's container-hardening posture.
+FROM nginxinc/nginx-unprivileged:alpine AS runtime
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s \
-  CMD wget -qO- http://127.0.0.1/ >/dev/null 2>&1 || exit 1
+  CMD wget -qO- http://127.0.0.1:8080/ >/dev/null 2>&1 || exit 1
